@@ -9,8 +9,8 @@ def signup(request):
             user = form.save()
             login(request, user)
             return redirect('/')
-        else:
-            form = SignupForm()
+    else:
+        form = SignupForm()
         return render(request, 'accounts/signup.html', {'form': form})
 
 # Create your views here.
